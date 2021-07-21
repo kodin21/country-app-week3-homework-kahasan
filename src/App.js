@@ -2,11 +2,13 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import { Stack, Button } from '@chakra-ui/react';
 import Card from './Card';
+import StatisticItem from './StatisticItem';
 
 function App() {
   const [countries, setCountries] = useState([]);
   const [showCountries, setShowCountries] = useState(true);
 
+  //Fetch data from api and set result to countries variable
   useEffect(() => {
     fetch('https://restcountries.eu/rest/v2/all')
       .then((res) => res.json())
@@ -14,7 +16,8 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <>
+      {/* Some chakraui components */}
       <Stack
         mt="30px"
         justify="center"
@@ -22,6 +25,7 @@ function App() {
         spacing={4}
         align="center"
       >
+        {/* Click this button and set showCountries to true */}
         <Button
           onClick={() => {
             setShowCountries(true);
@@ -29,19 +33,26 @@ function App() {
           colorScheme="teal"
           variant={showCountries ? 'solid' : 'outline'}
         >
-          Ülke Listesi
+          List Of Countries
         </Button>
+
+        {/* Click this button and set showCountries to false */}
         <Button
           onClick={() => {
             setShowCountries(false);
           }}
           colorScheme="teal"
+          //If showCountries is false then button variant will be solid
+          //In that way button looks like selected
           variant={!showCountries ? 'solid' : 'outline'}
         >
-          İstatikler
+          Language Statistic
         </Button>
       </Stack>
+
       <div className="App">
+        {/* If showCountries is true then show the country list */}
+        {/* otherwise statistic page will be there */}
         {showCountries &&
           countries &&
           countries.map((country, index) => (
@@ -56,9 +67,9 @@ function App() {
               capital={country.capital}
             />
           ))}
-        {}
+        {!showCountries && <StatisticItem countries={countries} />}
       </div>
-    </div>
+    </>
   );
 }
 
