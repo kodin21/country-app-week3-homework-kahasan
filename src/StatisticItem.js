@@ -39,8 +39,8 @@ function StatisticItem({ countries }) {
 
   //Sort last array
   var sortable = [];
-  for (var vehicle in foundDublicate) {
-    sortable.push([vehicle, foundDublicate[vehicle]]);
+  for (var item in foundDublicate) {
+    sortable.push([item, foundDublicate[item]]);
   }
 
   sortable.sort(function (a, b) {

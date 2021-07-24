@@ -20,6 +20,7 @@ function Card({
       borderRadius="lg"
       overflow="hidden"
     >
+      {/* img element for displaying flag */}
       {flag && <Image src={flag} alt={name} />}
 
       <Box p="6">
@@ -45,6 +46,8 @@ function Card({
             </Box>
           )}
         </Box>
+        {/* If languages array is empty then pass this element */}
+        {/* Otherwise languages.map func won't run */}
         {languages && (
           <Box
             mt="1"
