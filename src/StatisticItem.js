@@ -38,7 +38,7 @@ function StatisticItem({ countries }) {
   let foundDublicate = findDublicate(language);
 
   //Sort last array
-  var sortable = [];
+  const sortable = [];
   for (var item in foundDublicate) {
     sortable.push([item, foundDublicate[item]]);
   }
@@ -47,10 +47,13 @@ function StatisticItem({ countries }) {
     return b[1] - a[1];
   });
 
+  //Get just the first 10 item
+  const sliced = sortable.slice(0, 10);
+
   return (
     <div>
-      {sortable.map((ab, index) => (
-        <Card key={index} name={ab[0]} count={ab[1]} />
+      {sliced.map((ab, index) => (
+        <Card key={index} id={index} name={ab[0]} count={ab[1]} />
       ))}
     </div>
   );

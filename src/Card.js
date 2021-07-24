@@ -9,6 +9,7 @@ function Card({
   subregion,
   region,
   count,
+  id,
 }) {
   return (
     <Box
@@ -40,10 +41,11 @@ function Card({
           alignItems="baseline"
           justifyContent={count ? 'space-between' : 'initial'}
         >
+          {count && <Badge px="2">{parseInt(id) + 1}</Badge>}
           <Badge borderRadius="full" px="2" colorScheme="teal">
             {name}
           </Badge>
-          {count && <Badge px="2">{count}</Badge>}
+          {count && <Badge px="2">{count} COUNTRIES</Badge>}
           {(region || subregion) && (
             <Box
               color="gray.500"
