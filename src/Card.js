@@ -17,11 +17,22 @@ function Card({
       mt="20px"
       maxW="sm"
       borderWidth="1px"
-      borderRadius="lg"
+      borderRadius="20px"
       overflow="hidden"
+      _hover="background-color: red"
     >
       {/* img element for displaying flag */}
-      {flag && <Image src={flag} alt={name} />}
+      {flag && (
+        <Image
+          borderRadius="20px"
+          objectFit="cover"
+          height="250px"
+          src={flag}
+          alt={name}
+          mr="auto"
+          ml="auto"
+        />
+      )}
 
       <Box p="6">
         <Box
