@@ -1,29 +1,37 @@
-### Ülke Listesi / Istatistikleri Uygulaması
+## You can visit the demo link.
 
-- Lütfen bu uygulamanızı React kullanarak yapın.
-- Bu uygulamada Create-React-App kullanarak bir başlangıç yapın.
+## The project deployed with Vercel
 
-## Uygulama detayı
+🚀🚀
 
-- Açılış sayfasında [Ülke Listesi, Istatistikler] adında iki buton olmalı. Ulke listesi ise açılışta seçili olarak gelmeli. (Tab gibi düşünebilirsiniz.)
+[------Click to Live-----](https://country-app-ten.vercel.app)
 
+## Tech stack
 
-- Ülke listesi seçili olduğu zaman ekranda API'dan dönen ülkelerin [Isim, Bayrak, Baskent, Dil] bilgilerinin yer aldığı bir kart olacak.
+- React
+- Chakraui
 
-- Istatistikler seçili olduğu zaman ise ekranda bu ülkelerde en çok konuşulan 10 dil aşağıdaki formatta yer alacak.
-    ```
-    1) Dil Adı - Konusulan ulke sayisi
-    ...
-    10) Dil Adı - Konusulan ulke sayisi
+## Screenshots from app
 
+![Screenshot of country app](1.png)
+![Screenshot of country app](2.png)
 
-    Orn: 
-    1) English - 91
-    2) French  - 45
-    ```
+## Getting Started with Create React App
 
-- Olsa iyi olur: Uygulamanızi bir link üzerinden yayınlamayı  deneyin (deploy). Yayınlayabilirseniz readme dosyanıza live preview olarak o linki ekleyin. Kullanabileceğiniz örnek servisler: Vercel, Netlify (Başka yöntem kullanmakta özgürsünüz)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-## API Link
-https://restcountries.eu/rest/v2/all
+In the project directory, you can run:
+
+### `npm install`
+
+After installed all dependencies just run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
